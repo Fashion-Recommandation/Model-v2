@@ -265,7 +265,9 @@ criterion = nn.MSELoss()
 num_epochs = 60
 # best_model = train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs)
 best_model = ComplexLinearRegression(input_size).to(device)
-best_model.load_state_dict(torch.load("./core/fashion_recommedation2.pt"))
+# best_model.load_state_dict(torch.load("./core/fashion_recommedation2.pt"))
+best_model.load_state_dict(torch.load("./core/fashion_recommedation.pt"))
+
 # best_model = torch.load('./core/fashion_recommedation.pt')
 best_model.eval()
 
